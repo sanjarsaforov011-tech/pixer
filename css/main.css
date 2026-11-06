@@ -1,0 +1,463 @@
+/* 1. UMUMIY SOZLAMALAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Yozuvlar va Sarlavhalar teglar uchun */
+.section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e56b6f;
+    letter-spacing: 2px;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ampersand {
+    color: #e56b6f;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.orange-tag {
+    color: #e56b6f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.btn-dark {
+    display: inline-block;
+    background-color: #a62b2b;
+    color: #ffffff;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #000000;
+}
+
+/* 2. NAVBAR PANEL */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo, .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555555;
+    margin: 0 18px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e56b6f;
+}
+
+.cart-btn {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 1px solid #dddddd;
+    padding-left: 15px;
+}
+
+/* 3. HERO SECTION */
+.hero-section {
+    background-color: #f9f9f9;
+    padding: 80px 6%;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #666666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-height: 450px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+/* 4. CATEGORIES (DOIRALAR) BO'LIMI */
+.categories-section {
+    padding: 90px 6%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.circle-gold { background-color: #dfb16b; }
+.circle-orange { background-color: #e75a1e; }
+.circle-red { background-color: #990c13; }
+
+.circle .icon {
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+}
+
+.cat-item h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.categories-text-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 40px;
+}
+
+.info-text-block {
+    flex: 1;
+}
+
+.info-text-block h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.info-text-block p {
+    font-size: 14px;
+    color: #777777;
+}
+
+/* 5. SHAXMAT ARXITEKTURASI (SPLIT PRODUCTS) */
+.split-products-section {
+    padding: 60px 6%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 100px;
+}
+
+.product-row.reverse-row {
+    flex-direction: row-reverse;
+}
+
+.prod-img-box {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.gray-bg-box {
+    position: absolute;
+    width: 85%;
+    height: 220px;
+    background-color: #f4f4f4;
+    z-index: 1;
+}
+
+.left-box { left: 0; }
+.right-box { right: 0; }
+
+.prod-img-box img {
+    position: relative;
+    z-index: 2;
+    height: 340px;
+    object-fit: contain;
+    filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.12));
+}
+
+.prod-details-box {
+    flex: 1;
+}
+
+.prod-details-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.prod-details-box p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.link-underline {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 3px;
+}
+
+/* 6. MAHSULOTLAR GRID GALEREYASI */
+.collection-section {
+    padding: 80px 6%;
+    background-color: #ffffff;
+}
+
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.grid-product-card {
+    text-align: center;
+}
+
+.grid-img-wrapper {
+    background-color: #fcfcfc;
+    padding: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-img-wrapper img {
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.grid-product-card:hover .grid-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.grid-product-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.grid-product-card .price {
+    font-size: 14px;
+    color: #777777;
+}
+
+.center-btn-box {
+    text-align: center;
+}
+
+/* 7. BANNER CTA */
+.banner-cta-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover no-repeat;
+    padding: 100px 6%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.banner-overlay-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner-overlay-content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* 8. NEWSLETTER BO'LIMI */
+.newsletter-section {
+    padding: 90px 6%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.news-icon {
+    margin-bottom: 15px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btn-black-submit {
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+/* 9. MAIN FOOTER */
+.main-footer {
+    background-color: #f7f7f7;
+    padding: 70px 6% 30px 6%;
+    text-align: center;
+}
+
+.footer-desc {
+    font-size: 14px;
+    color: #777777;
+    max-width: 350px;
+    margin: 15px auto 40px auto;
+}
+
+.footer-info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-info-item h5 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+.footer-info-item p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 25px;
+    font-size: 12px;
+    color: #999999;
+}
+
+/* 10. RESPONSIVE (RESPONSIVELIK) */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .categories-text-info, .product-row, .product-row.reverse-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .footer-info-grid {
+        gap: 40px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
